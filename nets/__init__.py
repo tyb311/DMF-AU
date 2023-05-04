@@ -1,3 +1,3 @@
 
-from .lunet import *
+from .mfu import *
 from .siam import *

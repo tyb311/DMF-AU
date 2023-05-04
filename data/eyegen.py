@@ -5,7 +5,6 @@ sys.path.append('..')
 
 if __name__ == '__main__':
 	from trans import *
-	from show import *
 	from eyenpy import *
 else:
 	try:
@@ -16,7 +15,6 @@ else:
 		from data.eyenpy import *
 
 #start#
-import kornia
 import imgaug as ia
 import imgaug.augmenters as iaa
 IAA_NOISE = iaa.OneOf(children=[# Noise

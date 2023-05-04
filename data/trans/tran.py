@@ -15,9 +15,6 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 # 图像显示
 import matplotlib as mpl
-if 'TAN' not in socket.gethostname():
-    print('Run on Server!!!')
-    mpl.use('Agg')#服务器绘图
 from matplotlib import pyplot as plt
 plt.rcParams['image.cmap'] = 'gray'
 

@@ -33,10 +33,7 @@ from nets.siam import SIAM
 
 def build_model(type_net='dmf', type_seg='', args=None):
 	print('build_model:', type_net, type_seg, args.con)
-	if 'dmf' == type_net:
-		model = DMFNet(type_net, type_seg, num_con=args.num_con)
-	else:
-		model = eval(type_net+'(in_channels=1, num_con=args.num_con, type_seg=type_seg)')
+	model = eval(type_net+'(in_channels=1, num_con=args.num_con, type_seg=type_seg)')
 		
 	model = SIAM(encoder=model, num_con=args.num_con, con=args.con)
 	if type_seg=='lunet':
